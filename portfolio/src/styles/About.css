@@ -1,0 +1,22 @@
+.about {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 100px 0;
+  text-align: left;
+}
+
+.about h1 {
+  font-size: 72px;
+  margin-bottom: 20px;
+}
+
+.about h2 {
+  font-size: 48px;
+  color: var(--secondary-color);
+  margin-bottom: 30px;
+}
+
+.about p {
+  font-size: 18px;
+  line-height: 1.6;
+}
