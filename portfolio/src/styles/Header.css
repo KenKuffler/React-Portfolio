@@ -1,28 +1,45 @@
 .header {
-    background-color: var(--primary-color);
+    background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
+    background-size: cover;
     padding: 20px 0;
+    position: relative;
+    width: 100%;
+  }
+
+  .header-title {
+    font-size: 48px;
+    color: black;
+    align-content: left;
+    margin-left: 10px;
   }
   
   .nav-menu {
     display: flex;
-    justify-content: flex-end;
+    flex-wrap: wrap;
     list-style-type: none;
-    margin: 0;
+    align-content: right;
+    margin-right: 100px;
     padding: 0;
   }
   
   .nav-item {
     margin-left: 30px;
+    justify-content: center;
   }
   
   .nav-link {
     color: white;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 25px;
     transition: color 0.3s ease;
   }
   
-  .nav-link:hover,
-  .nav-link.active {
-    color: var(--secondary-color);
+  .nav-link:hover {
+    color: var(--primary-color);
   }
+
+  .nav-link.active {
+    color: white;
+  }
+
+  

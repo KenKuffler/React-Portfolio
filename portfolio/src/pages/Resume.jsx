@@ -1,5 +1,5 @@
 import React from 'react';
-
+import '../styles/Resume.css';
 const Resume = () => {
   return (
     <section className="resume-section">
@@ -7,7 +7,7 @@ const Resume = () => {
       
       {/* Downloadable Resume */}
       <div className="resume-download">
-        <a href="/path-to-your-resume.pdf" download>
+      <a href="/ken-kuffler-resume.pdf" download>
           Download My Resume
         </a>
       </div>
@@ -16,7 +16,7 @@ const Resume = () => {
       <div className="proficiencies">
         <h3>Proficiencies</h3>
         <ul>
-          <li>HTML, CSS, JavaScript </li>
+          <li>HTML, CSS, JavaScript, TypeScript </li>
           <li>React </li>
           <li>Node.js, Express.js</li>
           <li>PostgreSQL, MongoDB, Docker</li>

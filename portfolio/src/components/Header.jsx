@@ -7,6 +7,7 @@ function Header() {
 
   return (
     <header className="header">
+      <h1 className="header-title">Kenneth Kuffler</h1>
       <nav>
         <ul className="nav-menu">
           <li className="nav-item">

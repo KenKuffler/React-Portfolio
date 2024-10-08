@@ -1,24 +1,89 @@
-function Contact() {
-    return (
-      <section>
+import React, { useState } from 'react';
+import '../styles/Contact.css';
+
+const Contact = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
+
+  const handleInputChange = (e) => {
+    const { target } = e;
+    const inputType = target.name;
+    const inputValue = target.value;
+
+    if (inputType === 'name') {
+      setName(inputValue);
+    } else if (inputType === 'email') {
+      setEmail(inputValue);
+    } else {
+      setMessage(inputValue);
+    }
+  };
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+
+    if (!name || !email || !message) {
+      setErrorMessage('All fields are required');
+      return;
+    }
+
+    if (!/^\S+@\S+\.\S+$/.test(email)) {
+      setErrorMessage('Please enter a valid email address');
+      return;
+    }
+
+    setName('');
+    setEmail('');
+    setMessage('');
+    setErrorMessage('');
+  };
+
+  return (
+    <div className="contact-page">
+      <div className="contact-form">
         <h2>Contact Me</h2>
-        <form>
-          <div>
-            <label htmlFor="name">Name</label>
-            <input type="text" id="name" name="name" required />
+        <form onSubmit={handleFormSubmit}>
+          <div className="form-group">
+            <label htmlFor="name">Name:</label>
+            <input
+              value={name}
+              name="name"
+              onChange={handleInputChange}
+              type="text"
+              placeholder="Your Name"
+            />
           </div>
-          <div>
-            <label htmlFor="email">Email</label>
-            <input type="email" id="email" name="email" required />
+          <div className="form-group">
+            <label htmlFor="email">Email:</label>
+            <input
+              value={email}
+              name="email"
+              onChange={handleInputChange}
+              type="email"
+              placeholder="Your Email"
+            />
           </div>
-          <div>
-            <label htmlFor="message">Message</label>
-            <textarea id="message" name="message" required></textarea>
+          <div className="form-group">
+            <label htmlFor="message">Message:</label>
+            <textarea
+              value={message}
+              name="message"
+              onChange={handleInputChange}
+              placeholder="Your Message"
+            />
           </div>
-          <button type="submit">Submit</button>
+          <button type="submit" className="submit-btn">Submit</button>
         </form>
-      </section>
-    );
-  }
-  
-  export default Contact;
+        {errorMessage && (
+          <div>
+            <p className="error-text">{errorMessage}</p>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default Contact;
