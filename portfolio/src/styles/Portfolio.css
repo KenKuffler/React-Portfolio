@@ -1,13 +1,19 @@
+.portfolio-container {
+  min-height: 100vh;
+  background-color: var(--background-color);
+  padding: 100px 20px;
+}
+
 .portfolio {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 100px 20px;
 }
 
 .portfolio h2 {
   font-size: 48px;
   margin-bottom: 50px;
   text-align: center;
+  color: var(--heading-color);
 }
 
 .project-grid {
@@ -63,11 +69,14 @@
 
 .project-info {
   padding: 20px;
+  background-color: var(--primary-color); /* Add this line */
+  color: var(--text-color); /* Add this line */
 }
 
 .project-card h3 {
   font-size: 24px;
   margin-bottom: 10px;
+  color: var(--heading-color); /* Add this line */
 }
 
 .project-card p {
@@ -90,4 +99,10 @@
 
 .project-links a:hover {
   background-color: #45e0c0;
+}
+
+/* Add this to ensure the portfolio section takes up at least the full viewport height */
+.portfolio-container {
+  min-height: 100vh;
+  background-color: var(--background-color);
 }
