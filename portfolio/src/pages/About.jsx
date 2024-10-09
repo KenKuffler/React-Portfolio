@@ -5,11 +5,11 @@ import myImage from '../assets/me.jpeg';
 function About() {
   return (
     <section className="about">
-      <div id="photo">
-        <img src={myImage} alt="Kenneth Kuffler" />
+      <div>
+        <img id="photo" src={myImage} alt="Kenneth Kuffler" />
       </div>
       <h1>Hi, I'm Kenneth Kuffler</h1>
-      <h2>I'm a Web Developer</h2>
+      <h2>I'm a Full-Stack Web Developer</h2>
       <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
       magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
