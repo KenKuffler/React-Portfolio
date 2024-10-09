@@ -14,7 +14,7 @@ A website built using React to display projects, github repository, social media
 - [Questions](#questions)
 
 ## Installation
-No installation necessary. Simply visit the deployed via Netlify React application at kenneth-kuffler-react-portfolio.netlify.app
+No installation necessary. Simply visit the deployed via Netlify React application at https://kenneth-kuffler-react-portfolio.netlify.app
 
 ## Usage
 To use, visit the deployed Netlify application at the previously supplied URL
