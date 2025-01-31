@@ -90,10 +90,9 @@
 
 .project-links a {
   padding: 8px 16px;
-  background-color: var(--secondary-color);
+  background-color: #45e0c0;
   color: var(--primary-color);
   border-radius: 4px;
-  transition: background-color 0.3s ease;
   text-decoration: none;
 }
 
