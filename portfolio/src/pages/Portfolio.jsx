@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../styles/Portfolio.css';
+import NoDemoModal from './NoDemoModal';
 
 // Import your project images
 import project1Image from '../assets/project1.png';
@@ -10,50 +11,63 @@ import project5Image from '../assets/project5.png';
 import project6Image from '../assets/project6.png';
 
 function Portfolio() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(null);
+
   const projects = [
     {
       title: "Employee Payroll Tracker",
-      description: "an application that enables a payroll manager to view and manage employee payroll data. To run, navigate to repository, clone, and preview the index.html via live server. [HTML, CSS, JavaScript]",
+      description: "An application that enables a payroll manager to view and manage employee payroll data...",
       image: project1Image,
       github: "https://github.com/KenKuffler/Employee-Payroll-Tracker",
-      demo: ""
+      demo: "" // No demo available
     },
     {
       title: "Portfolio-Page",
-      description: "Basic Portfolio Page that shows off projects and contact information. To run, navigate to the repository, clone it, and preview the index.html via Live Server[HTML, CSS]",
+      description: "Basic Portfolio Page that showcases projects and contact information...",
       image: project2Image,
       github: "https://github.com/KenKuffler/Portfolio-Page",
-      demo: ""
+      demo: "" // No demo available
     },
     {
       title: "Personal-Blog",
-      description: "a two-page website where users will input and view blog posts. It includes building a content form, dynamically rendering blog posts, and implementing a light/dark mode toggle. To run, navigate to the repository, clone, and preview the index.html file via live server. [HTML, CSS, JavaScript]",
+      description: "A two-page website where users input and view blog posts...",
       image: project3Image,
       github: "https://github.com/KenKuffler/Personal-Blog",
-      demo: ""
+      demo: "" // No demo available
     },
     {
       title: "Proffessional README Generator",
-      description: "This application will help a user generate a README without having to worry about applying proper markdown syntax. To run, navigate to repository and follow README instructions. [JavaScript, Node.JS]",
+      description: "A CLI tool to help users generate well-formatted README files...",
       image: project4Image,
       github: "https://github.com/KenKuffler/Pro-README-Generator",
-      demo: ""
+      demo: "" // No demo available
     },
     {
       title: "ShopSpot",
-      description: "An e-commerce website for showing prospective clientele a website example for potentially being hired to make a website for those potential clients. [HTML, CSS(partial bootstrap incorporation), JavaScript]",
+      description: "An e-commerce website showcasing products...",
       image: project5Image,
       github: "https://github.com/KenKuffler/ShopSpot",
-      demo: "https://kenkuffler.github.io/ShopSpot/"
+      demo: "https://kenkuffler.github.io/ShopSpot/" // Has a demo
     },
     {
       title: "SQL-Employee-Tracker",
-      description: "A content management system(CMS) that is a command-line application intended to manage a company's employee database. To run, navigate to repository and follow README instructions. [Node.js, Inquirer, PostgreSQL]",
+      description: "A command-line application for managing company employees...",
       image: project6Image,
       github: "https://github.com/KenKuffler/SQL-Employee-Tracker",
-      demo: ""
+      demo: "" // No demo available
     }
   ];
+
+  // Handle clicking the Live Demo button
+  const handleLiveDemoClick = (project) => {
+    if (!project.demo) {
+      setSelectedProject(project.title);
+      setIsModalOpen(true);
+    } else {
+      window.open(project.demo, "_blank");
+    }
+  };
 
   return (
     <div className="portfolio-container">
@@ -70,13 +84,22 @@ function Portfolio() {
                 <p>{project.description}</p>
                 <div className="project-links">
                   <a href={project.github} target="_blank" rel="noopener noreferrer">GitHub</a>
-                  <a href={project.demo} target="_blank" rel="noopener noreferrer">Live Demo</a>
+                  <button onClick={() => handleLiveDemoClick(project)}>
+                    Live Demo
+                  </button>
                 </div>
               </div>
             </div>
           ))}
         </div>
       </div>
+
+      {/* Modal for No Demo */}
+      <NoDemoModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+        projectTitle={selectedProject} 
+      />
     </div>
   );
 }

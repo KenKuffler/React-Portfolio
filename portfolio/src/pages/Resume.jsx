@@ -7,7 +7,7 @@ const Resume = () => {
       
       {/* Downloadable Resume */}
       <div className="resume-download">
-      <a href="/ken-kuffler-resume.pdf" download>
+      <a href="/Ken_Kuffler_Resume.png" download>
           Download My Resume
         </a>
       </div>
@@ -16,7 +16,7 @@ const Resume = () => {
       <div className="proficiencies">
         <h3>Proficiencies</h3>
         <ul>
-          <li>HTML, CSS, JavaScript, TypeScript </li>
+          <li>HTML, CSS, JavaScript, TypeScript, Python </li>
           <li>React </li>
           <li>Node.js, Express.js</li>
           <li>PostgreSQL, MongoDB, Docker</li>
