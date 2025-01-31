@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/Portfolio.css';
-import NoDemoModal from './NoDemoModal';
+import NoDemoModal from '../components/NoDemoModal';
 
 // Import your project images
 import project1Image from '../assets/project1.png';
@@ -23,8 +23,8 @@ function Portfolio() {
       demo: "" // No demo available
     },
     {
-      title: "Portfolio-Page",
-      description: "Basic Portfolio Page that showcases projects and contact information...",
+      title: "Book Search Editor",
+      description: "a full-stack web application that allows users to search for books, save favorites, and manage their saved books...",
       image: project2Image,
       github: "https://github.com/KenKuffler/Portfolio-Page",
       demo: "" // No demo available
@@ -37,18 +37,18 @@ function Portfolio() {
       demo: "" // No demo available
     },
     {
-      title: "Proffessional README Generator",
+      title: "Professional README Generator",
       description: "A CLI tool to help users generate well-formatted README files...",
       image: project4Image,
       github: "https://github.com/KenKuffler/Pro-README-Generator",
       demo: "" // No demo available
     },
     {
-      title: "ShopSpot",
-      description: "An e-commerce website showcasing products...",
+      title: "VetFinder",
+      description: "A MERNG Stack Application for the searching of and price comparison of vet offices and their services.",
       image: project5Image,
-      github: "https://github.com/KenKuffler/ShopSpot",
-      demo: "https://kenkuffler.github.io/ShopSpot/" // Has a demo
+      github: "https://github.com/KenKuffler/VetFinder",
+      demo: "https://vetfinder-ib4b.onrender.com" // Has a demo
     },
     {
       title: "SQL-Employee-Tracker",
