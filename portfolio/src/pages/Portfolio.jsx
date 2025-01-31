@@ -16,18 +16,18 @@ function Portfolio() {
 
   const projects = [
     {
-      title: "Employee Payroll Tracker",
-      description: "An application that enables a payroll manager to view and manage employee payroll data...",
+      title: "Candidate Search Application",
+      description: "An application that utilizes Github API to search for candidates. API keys may be non-functioning... ",
       image: project1Image,
-      github: "https://github.com/KenKuffler/Employee-Payroll-Tracker",
-      demo: "" // No demo available
+      github: "https://github.com/KenKuffler/Candidate-Search-Tool",
+      demo: "https://kenk-candidatesearchtool.netlify.app/"
     },
     {
       title: "Book Search Editor",
       description: "a full-stack web application that allows users to search for books, save favorites, and manage their saved books...",
       image: project2Image,
       github: "https://github.com/KenKuffler/Portfolio-Page",
-      demo: "" // No demo available
+      demo: "https://book-search-editor-1.onrender.com"
     },
     {
       title: "Personal-Blog",
@@ -48,7 +48,7 @@ function Portfolio() {
       description: "A MERNG Stack Application for the searching of and price comparison of vet offices and their services.",
       image: project5Image,
       github: "https://github.com/KenKuffler/VetFinder",
-      demo: "https://vetfinder-ib4b.onrender.com" // Has a demo
+      demo: "https://vetfinder-ib4b.onrender.com"
     },
     {
       title: "SQL-Employee-Tracker",
